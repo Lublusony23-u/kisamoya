@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#ffe8f0">
+<title>Для Сони 💗</title>
+<style>
+:root{--pink:#f6a9c5;--rose:#d85f91;--cream:#fff9fb;--ink:#61394d;--soft:#ffe8f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100%;-webkit-text-size-adjust:100%;background:radial-gradient(circle at 10% 10%,#fff 0,transparent 30%),linear-gradient(135deg,#fff6fa,#ffe3ed 55%,#fff7fb);color:var(--ink);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.cover{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:calc(22px + env(safe-area-inset-top)) 16px calc(22px + env(safe-area-inset-bottom));position:relative;isolation:isolate}
+.card{width:min(720px,100%);text-align:center;padding:clamp(26px,6vw,58px) clamp(18px,5vw,48px);background:#ffffffc9;border:1px solid #fff;box-shadow:0 22px 70px #bd65852b;border-radius:32px;backdrop-filter:blur(12px);position:relative}
+.eyebrow{letter-spacing:.22em;text-transform:uppercase;font:600 11px Arial,sans-serif;color:#bd6288}
+h1{font-size:clamp(42px,9vw,76px);line-height:1.02;margin:18px 0;color:#bd4d7c;font-weight:normal}
+.subtitle{font-size:clamp(17px,3.6vw,22px);line-height:1.65;max-width:520px;margin:0 auto 26px}
+.flower{font-size:clamp(48px,9vw,76px);filter:drop-shadow(0 8px 12px #d85f9130);animation:float 3.4s ease-in-out infinite}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.btn{border:0;border-radius:999px;padding:13px 21px;background:var(--rose);color:white;box-shadow:0 8px 20px #d85f9130;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 11px 24px #d85f9145}
+.btn.secondary{background:#fff;color:#b94e7b;border:1px solid #f5c4d6;box-shadow:none}
+.small{font:12px Arial,sans-serif;color:#a66b83;margin-top:18px}
+main{width:min(980px,100%);margin:auto;padding:20px 16px calc(45px + env(safe-area-inset-bottom))}
+.section-title{text-align:center;font-size:clamp(28px,5vw,42px);font-weight:normal;color:#bd4d7c;margin:24px 0 10px}
+.section-intro{text-align:center;line-height:1.7;margin:0 auto 26px;max-width:600px}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:22px 0 18px}
+.tab{border:1px solid #f2c3d5;background:#ffffffa8;color:#a54b73;padding:10px 15px;border-radius:999px}
+.tab[aria-selected="true"]{background:#d85f91;color:#fff;border-color:#d85f91}
+.panel{display:none;animation:fade .35s ease}
+.panel.active{display:block}
+.panel-card{background:#ffffffc9;border:1px solid #fff;border-radius:26px;padding:clamp(20px,4vw,34px);box-shadow:0 12px 40px #bd65851a}
+.panel-card h3{font-size:27px;font-weight:normal;color:#bd4d7c;margin:0 0 12px}
+.panel-card p{font-size:17px;line-height:1.8;margin:0}
+.photo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.photo{aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#ffdce8,#fff8fb 50%,#f7bfd4);border:1px solid #fff;position:relative;display:flex;align-items:center;justify-content:center;color:#b45d80;text-align:center;padding:10px;font:13px Arial,sans-serif}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo span{position:relative;z-index:1;text-shadow:0 1px 4px #fff}
+.gift-wrap{display:flex;flex-direction:column;align-items:center;gap:18px;padding:8px}
+.gift{font-size:100px;line-height:1;filter:drop-shadow(0 10px 12px #d85f9128);animation:float 2.8s ease-in-out infinite}
+.hidden-note{display:none;margin-top:8px;padding:20px;border-radius:18px;background:#fff0f6;line-height:1.8;font-size:18px}
+.hidden-note.show{display:block;animation:fade .4s}
+.footer{text-align:center;padding:25px 12px 8px;color:#b46b89;font-size:14px}
+.petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}
+.petal{position:absolute;top:-30px;opacity:.6;animation:fall linear forwards;color:#e98ab0;text-shadow:0 2px 4px #fff}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(600deg);opacity:.08}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes fade{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:620px){
+  .card{border-radius:24px;padding:30px 20px;}
+  .eyebrow{letter-spacing:.14em;font-size:10px}
+  .subtitle{font-size:17px;line-height:1.55}
+  .actions{gap:10px}
+  .btn{min-height:46px;padding:12px 17px}
+  .tabs{gap:7px;margin:18px 0 14px}
+  .tab{padding:10px 12px;font-size:13px;min-height:40px}
+  .panel-card{padding:23px 20px;border-radius:22px}
+  .panel-card h3{font-size:25px}
+  .panel-card p{font-size:16px;line-height:1.7}
+}
+@media(max-width:390px){.actions{flex-direction:column}.actions .btn{width:100%}.tab{font-size:12px;padding:9px 10px}}
+@supports (-webkit-touch-callout:none){button{-webkit-appearance:none;touch-action:manipulation}.card{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="petals" id="petals" aria-hidden="true"></div>
+<section class="cover" id="top">
+  <div class="card">
+    <div class="flower" aria-hidden="true">🌷</div>
+    <div class="eyebrow">маленькая открытка для тебя</div>
+    <h1>Соня 💗</h1>
+    <p class="subtitle">Есть люди, которые делают обычные дни чуточку светлее. Эта маленькая страничка — просто чтобы напомнить тебе, какая ты замечательная.</p>
+    <div class="actions">
+      <button class="btn" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">Открыть открытку ✨</button>
+      <button class="btn secondary" id="musicBtn" onclick="toggleMusic()">♫ Включить мелодию</button>
+    </div>
+    <div class="small">сделано с теплом и капелькой магии</div>
+  </div>
+</section>
+<main id="message">
+  <h2 class="section-title">Для тебя, Соня</h2>
+  <p class="section-intro">Немного нежности, цветов и добрых слов — всё это здесь только для тебя.</p>
+  <nav class="tabs" role="tablist" aria-label="Разделы открытки">
+    <button class="tab" role="tab" aria-selected="true" data-tab="0">💌 Послание</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="1">🌸 О тебе</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="2">✨ Пожелания</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="3">🌷 Цветы</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="5">🎁 Сюрприз</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="6">☁️ Улыбнись</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="7">💗 В конце</button>
+  </nav>
+  <section class="panel active" role="tabpanel">
+    <div class="panel-card"><h3>Маленькое послание</h3><p>Соня, пусть у тебя будет побольше поводов улыбаться, рядом будут люди, с которыми спокойно и весело, а даже самые обычные дни приносят что-то хорошее. Ты заслуживаешь тепла, заботы и множества приятных мелочей. 💗</p></div>
+  </section>
+  <section class="panel" role="tabpanel"><div class="panel-card"><h3>В тебе есть что-то особенное</h3><p>Не обязательно быть идеальной, чтобы быть удивительной. Твоя индивидуальность, твои мысли, смех и маленькие привычки делают тебя именно тобой — и в этом вся прелесть. 🌸</p></div></section>
+  <section class="panel" role="tabpanel"><div class="panel-card"><h3>Я желаю тебе…</h3><p>Много счастливых моментов, искренних улыбок, уютных вечеров, исполнения желаний и людей, которые ценят тебя по-настоящему. Пусть хорошее случается чаще, чем ты ожидаешь. ✨</p></div></section>
+  <section class="panel" role="tabpanel"><div class="panel-card"><h3>Цветы для тебя</h3><p>Нежные розовые лилии и тюльпаны — будто маленькое напоминание о том, что красота бывает тихой, нежной и совсем не нуждается в лишних словах.</p><div style="font-size:clamp(42px,9vw,76px);margin-top:18px;letter-spacing:8px">🌷 🌸 🪷</div></div></section>
+  <section class="panel" role="tabpanel"><div class="panel-card"><h3>Для тебя есть сюрприз</h3><div class="gift-wrap"><div class="gift" aria-hidden="true">🎁</div><button class="btn" onclick="document.getElementById('surprise').classList.toggle('show')">Открыть подарок</button><div class="hidden-note" id="surprise">Твой сюрприз: пусть сегодня с тобой случится хотя бы одна маленькая, но очень приятная вещь. А если день не задался — помни, что завтра можно начать заново. Обнимаю словами 💗</div></div></div></section>
+  <section class="panel" role="tabpanel"><div class="panel-card"><h3>Срочное напоминание ☁️</h3><p>Соня, если ты читаешь это, то тебе официально разрешается отложить все дела на минутку, выдохнуть и улыбнуться. Да-да, именно тебе. 😊</p></div></section>
+  <section class="panel" role="tabpanel"><div class="panel-card"><h3>И напоследок…</h3><p>Пусть в твоей жизни будет больше света, спокойствия, смеха и людей, рядом с которыми можно быть собой. Эта открытка небольшая, но сделана с добрыми мыслями о тебе. 💗</p><div style="font-size:42px;margin-top:18px">💗 🌷 💗</div></div></section>
+  <div class="footer">Для Сони — с теплом ♡</div>
+</main>
+<script>
+const tabs=[...document.querySelectorAll('.tab')], panels=[...document.querySelectorAll('.panel')];
+tabs.forEach((tab,i)=>tab.addEventListener('click',()=>{
+  tabs.forEach((t,j)=>t.setAttribute('aria-selected',String(i===j)));
+  panels.forEach((p,j)=>p.classList.toggle('active',i===j));
+}));
+const petals=document.getElementById('petals');
+function makePetal(){
+  if(document.hidden)return;
+  const p=document.createElement('span');p.className='petal';p.textContent=['✿','❀','♡','🌸'][Math.floor(Math.random()*4)];
+  p.style.left=Math.random()*100+'vw';p.style.fontSize=(12+Math.random()*15)+'px';
+  p.style.setProperty('--drift',(Math.random()*160-80)+'px');
+  p.style.animationDuration=(7+Math.random()*7)+'s';petals.appendChild(p);
+  setTimeout(()=>p.remove(),15000);
+}
+setInterval(makePetal,650);for(let i=0;i<12;i++)setTimeout(makePetal,i*180);
+let audioCtx=null,oscillators=[],musicOn=false,melodyTimer=null;
+function toggleMusic(){
+  const btn=document.getElementById('musicBtn');
+  if(musicOn){oscillators.forEach(o=>{try{o.stop()}catch(e){}});oscillators=[];clearInterval(melodyTimer);musicOn=false;btn.textContent='♫ Включить мелодию';return;}
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC){btn.textContent='Музыка недоступна';return;}
+  audioCtx=new AC();musicOn=true;btn.textContent='Ⅱ Выключить мелодию';
+  const notes=[523.25,659.25,783.99,659.25,587.33,698.46,659.25,523.25];let n=0;
+  function note(){
+    if(!musicOn)return;
+    const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();
+    osc.type='sine';osc.frequency.value=notes[n%notes.length];gain.gain.setValueAtTime(.0001,audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(.055,audioCtx.currentTime+.04);
+    gain.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+.42);
+    osc.connect(gain);gain.connect(audioCtx.destination);osc.start();osc.stop(audioCtx.currentTime+.45);n++;
+  }
+  note();melodyTimer=setInterval(note,480);
+}
+</script>
+</body>
+</html>
